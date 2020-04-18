@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- if theres authtoken person is loged in check go to log in -->
+    <head>
+        <title>The App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="manifest" href="manifest.json">  
+        <link rel="apple-touch-icon" href="/img/icon.png">
+        <meta name="background_color">
+        <meta name="theme-color" content="#104977"/>
+        <meta name="Description" content="The main page of the app where you can submit your picture to be analysed">
+    </head>
+
+    <body>    
+
+        <header>
+            <div class="header">
+                <h1 id="title">You are Logged In</h1>
+                <input class="logout-button" type="submit" onclick="logout()" value="Log Out">
+            </div>
+        </header>
+
+        <script>
+            //test for authtoken otherwise rerout to login page
+            if(localStorage.authtoken == "undefined")
+            {
+                location.replace("pages/login.html");
+            }
+        </script>
+
+        <main>
+            <p class="image-upload-text">Upload File Here</p>
+            <div class="image-upload">
+                <p id="error" ></p>
+                <form class="image-upload-form" enctype="multipart/form-data">
+                    <label for="image-upload" class="image-upload-label">
+                        Select Image
+                    </label>
+                    <input id="image-upload" class="image-select-button_hidden" type="file" name="fileimg" id="image" accept="image/*">
+                    <input class="image-upload-button" type="button" onclick= "uploadIMG()" value="submit">
+                </form>
+            </div>
+            <div class="info">
+                <h1 id="product"></h1>
+                <p id="link" ></p>
+            </div>
+            <div class="image-preview" id="imagePreview">
+                <img src="" alt="Image-Preview" class="image-preview_image">
+                <span class="image-preview_text">Image Preview</span>
+            </div>
+        </main>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/camera.js"></script>
+        <script>
+    if("serviceWorker" in navigator)
+    {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("sw.js").then(swReg =>{
+                console.log("Service Worker Registered");
+            }).catch(error =>{
+                console.log("There was an error registering the service worker", error);
+            });
+        });
+    }
+</script>
+    </body>
+</html>

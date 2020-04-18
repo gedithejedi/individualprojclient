@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(239, 241, 241);
+}
+
+header
+{
+    margin-left: 4em;
+    margin-right: 4em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: large;
+}
+
+.reg-form
+{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#error
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    text-align: center;
+}
+
+.reg-input
+{
+    margin: 2em;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: .5em;
+    background-color: rgb(239, 241, 241);
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-bottom: .2vh solid rgb(78, 77, 77);
+}
+
+.reg-input:focus
+{
+    border-bottom: .2vh solid rgb(165, 170, 207);
+    outline-width: 0;
+}
+
+.reg-heading
+{
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: 3em;
+    font-size: medium;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.reg-button , .login-button
+{
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(119, 117, 117);
+    border: .05vh solid black;
+    height: 2em;
+    width: 10em;
+}
