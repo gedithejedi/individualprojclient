@@ -51,7 +51,7 @@ function uploadIMG()
                 contentType: false,
                 processType: false,
                 processData: false,
-                
+
                 success:function(data, status, xhr)//data succes signature
                 {
                     console.log("data sent and response gotten");
@@ -77,6 +77,7 @@ function uploadIMG()
                     document.getElementById('error').innerHTML = data;
                 }
             });
+            document.getElementById('error').innerHTML = "Picture has been sent. Please wait."; 
         }
     }
     else
