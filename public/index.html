@@ -2,6 +2,14 @@
 <html lang="en">
     <!-- if theres authtoken person is loged in check go to log in -->
     <head>
+        <script>
+            //test for authtoken otherwise rerout to login page
+            if(localStorage.authtoken == "undefined")
+            {
+                location.replace("pages/login.html");
+            }
+        </script>
+
         <title>The App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
@@ -20,14 +28,6 @@
                 <input class="logout-button" type="submit" onclick="logout()" value="Log Out">
             </div>
         </header>
-
-        <script>
-            //test for authtoken otherwise rerout to login page
-            if(localStorage.authtoken == "undefined")
-            {
-                location.replace("pages/login.html");
-            }
-        </script>
 
         <main>
             <p class="image-upload-text">Upload File Here</p>

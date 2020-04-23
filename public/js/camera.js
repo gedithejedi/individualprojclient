@@ -36,10 +36,11 @@ function uploadIMG()
     {
         if(trigger == 0)
         {
+            document.getElementById('error').innerHTML = "Image has been sent Please wait"; 
             formdata = new FormData();	
             formdata.append('img', file);
             $.ajax({
-                url : djangourl,
+                url : externalhost,
                 type: "POST",
                 dataType: "json",
                 data: formdata,
@@ -51,24 +52,14 @@ function uploadIMG()
                 contentType: false,
                 processType: false,
                 processData: false,
-
+                
                 success:function(data, status, xhr)//data succes signature
                 {
-                    console.log("data sent and response gotten");
-                    console.log(data);
-                    //if(data.post)
-                    //{
-                        document.getElementById('error').innerHTML = data.post; 
-                        document.getElementById('product').style.display = 'block';
-                        document.getElementById("product").innerHTML = data.object;
-                        document.getElementById('link').style.display = 'block';
-                        document.getElementById("link").innerHTML = "<a class ="+"link"+" href='https://www.amazon.co.uk/s?k="+data.object+"&ref=nb_sb_noss_1'>Click Here for Amazon Link</a>";
-                   // }
-                   // else
-                    // {
-                    //     document.getElementById('error').innerHTML = data.Object;
-                    // }
-                    // trigger = 1;
+                    document.getElementById('error').innerHTML = data.post; 
+                    document.getElementById('product').style.display = 'block';
+                    document.getElementById("product").innerHTML = data.object;
+                    document.getElementById('link').style.display = 'block';
+                    document.getElementById("link").innerHTML = "<a class ="+"link"+" href='https://www.amazon.co.uk/s?k="+data.object+"&ref=nb_sb_noss_1'>Click Here for Amazon Link</a>";
                 }
                 ,
                 error : function(xhr,errmsg,err) 
@@ -77,7 +68,6 @@ function uploadIMG()
                     document.getElementById('error').innerHTML = data;
                 }
             });
-            document.getElementById('error').innerHTML = "Picture has been sent. Please wait."; 
         }
     }
     else
