@@ -11,19 +11,19 @@ This works well both on desktop and mobile.
 ## Images
 This is an image of the log-in page of the project:
 
-![An image of the log-in page](/images/login.png)
+![An image of the log-in page](/Images/login.png)
 
 This is an image of the sign-up page:
 
-![An image of the sign-up page](/images/signup.png)
+![An image of the sign-up page](/Images/signup.png)
 
 This is an image of the user feedback and form valiation:
 
-![An image of the user feedback and form validation](/images/wrongetails.png)
+![An image of the user feedback and form validation](/Images/wrongetails.png)
 
 This is an image of the index page:
 
-![An image of the index page](/images/index.png)
+![An image of the index page](/Images/index.png)
 
 ## Deployment : https://individual-project-dit.web.app/pages/login.html
 
