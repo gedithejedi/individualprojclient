@@ -6,7 +6,7 @@ Essencially what it does is a user selects or takes an image of either HP Omen 2
 This works well both on desktop and mobile.
 
 ## What Does it Do?
-1. Register and Log In system that sends all th data to Django server and gets validated there.
+1. Register and Log In system that sends all the data to Django server and gets validated there.
 2. Sends image to a Django server to later identify the product in the image. (Only works for latop and a computer mouse)
 
 ## Images
