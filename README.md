@@ -10,8 +10,9 @@ For now this only works with a HP omen Laptop and Logitec mouse as these were th
 This works well both on desktop and mobile as this meets Google Progressive Web App standarts (PWA).
 
 ## What Does it Do?
-1. Register and Log In system that sends all the data to Django server and gets validated there.
-2. Sends the user image to a Django server to later identify the product in the image. (Only works for hp latop and a logitec mouse)
+1. Register and Log In system with user validation. The details get sent to an external Django server where the data is validated.
+2. Sends an image to a Django external Django server. Here the image is checked and run against the TensorFlow model. After its done a response is sent back to the client.
+(Only works for hp latop and a logitec mouse)
 
 ## Images
 This is an image of the log-in page of the project:
