@@ -1,13 +1,13 @@
 # Client side for my 3rd Year Individual Project
 
 ## Description
-This is a Progressive Web Application connecting into a django server backend through the use of AJAX requests.
-Essencially what it does is a user selects or takes an image of either HP Omen 2016 laptop or Logitec M235 mouse, uploads it and the machine learning model decides which of the two the product is and sends user a response with a place where to buy the product (Amazon).
+This is a Progressive Web Application connecting into a Django server backend through the use of AJAX requests.
+The user has the option to takes a pictue and uploads it using a button. The server using machine learning model decides what the object is and sends user a response with a place where to buy the product (Amazon). (Only works with HP omen Laptop and Logitec mouse)
 This works well both on desktop and mobile.
 
 ## What Does it Do?
 1. Register and Log In system that sends all the data to Django server and gets validated there.
-2. Sends image to a Django server to later identify the product in the image. (Only works for latop and a computer mouse)
+2. Sends the user image to a Django server to later identify the product in the image. (Only works for hp latop and a logitec mouse)
 
 ## Images
 This is an image of the log-in page of the project:
