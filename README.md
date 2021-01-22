@@ -3,7 +3,7 @@
 ## Description
 This is a Progressive Web Application connecting into a Django server backend through the use of AJAX requests.
 The user has the option to takes a pictue and uploads it using a button. The server using machine learning model decides what the object is and sends user a response with a place where to buy the product (Amazon). (Only works with HP omen Laptop and Logitec mouse)
-This works well both on desktop and mobile.
+This works well both on desktop and mobile as this meets Google Progressive Web App standarts (PWA).
 
 ## What Does it Do?
 1. Register and Log In system that sends all the data to Django server and gets validated there.
